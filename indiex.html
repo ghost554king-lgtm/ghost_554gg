@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-app">
+        <header>
+            <h1>بنك أسئلة مبادئ الاقتصاد</h1>
+            <div class="quiz-info">
+                <span>السؤال: <b id="current-num">1</b> / <span id="total-num">100</span></span>
+                <span>الدرجة: <b id="live-score">0</b></span>
+            </div>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+        </header>
+
+        <div id="quiz-body">
+            <h2 id="question-text">جاري تحميل الأسئلة...</h2>
+            <div id="options-container" class="options-grid"></div>
+        </div>
+
+      <footer>
+    <button id="next-btn" class="btn-primary" style="display: none;">السؤال التالي</button>
+    <div id="result-box" class="hide">
+        <h2>انتهى الاختبار!</h2>
+        <p id="final-score"></p>
+        <button onclick="location.reload()" class="btn-restart">إعادة الاختبار بأسئلة عشوائية</button>
+    </div>
+    
+    <div class="developer-signature">
+        تم صناعته بواسطة <span class="ghost-name">-_-𝔾ℍ𝕆𝕊𝕋-_-</span>
+    </div>
+</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
