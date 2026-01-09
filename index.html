@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إختبار المحاسبة النهائي - GHOST</title>
+    <title>Ghost Professional Exam</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="quiz-container">
         <header>
-            <h1>بنك أسئلة ليلة الامتحان (60 سؤال)</h1>
+            <h1>-_-𝔾ℍΟΣΤ-_- SYSTEM</h1>
             <div class="stats">
-                <span>السؤال: <span id="q-count">0</span>/60</span>
-                <span>النقاط: <span id="score">0</span></span>
+                <span>سؤال: <span id="current-q">1</span> / <span id="total-q">0</span></span>
+                <span>درجة: <span id="live-score">0</span></span>
             </div>
-            <div class="progress-bar"><div id="progress"></div></div>
+            <div class="progress-bg"><div id="progress-bar"></div></div>
         </header>
 
-        <div id="quiz">
-            <h2 id="question">جاري التحميل...</h2>
-            <div id="options" class="options-grid"></div>
-        </div>
+        <main id="content">
+            <h2 id="q-text">جاري التحميل...</h2>
+            
+            <div id="options-box" class="options-grid"></div>
 
-        <button id="next-btn" class="hide">السؤال التالي</button>
+            <div id="correction-zone" style="display:none">
+                <div id="words-grid" class="words-display"></div>
+                <div id="fix-input-area" style="display:none">
+                    <p style="color: #58a6ff; margin: 10px 0;">اكتب التصحيح للكلمة التي اخترتها:</p>
+                    <input type="text" id="user-fix" placeholder="اكتب التصحيح هنا..." autocomplete="off">
+                    <button id="check-fix-btn">تأكيد التصحيح</button>
+                </div>
+            </div>
 
-        <footer class="ghost-footer">
-            مراجعة ليلة الامتحان | <span class="ghost-signature">-_-𝔾ℍ𝕆𝕊𝕋-_-</span>
-        </footer>
+            <div id="feedback" class="feedback"></div>
+        </main>
+
+        <button id="next-btn" style="display:none">السؤال التالي</button>
     </div>
     <script src="script.js"></script>
 </body>

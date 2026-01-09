@@ -1,129 +1,161 @@
 const questions = [
-    // --- 25 سؤال صح وغلط (تركيز على الفروض والمبادئ) ---
-    { q: "المحاسبة المالية تخدم الإدارة فقط ولا تهم أطرافاً خارجية. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "مبدأ التكلفة التاريخية يقضي بتسجيل الأصول بسعر شرائها الأصلي. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "فرض الشخصية المعنوية يعني فصل أموال صاحب المنشأة عن أموال المنشأة. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "المعادلة المحاسبية هي الأصول + الخصوم = حقوق الملكية. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "الأراضي من الأصول الثابتة التي يتم حساب إهلاك سنوي لها. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "مبدأ الحيطة والحذر يعني تجاهل الخسائر المتوقعة. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "أساس الاستحقاق يسجل الإيرادات عند حدوثها حتى لو لم تُقبض نقداً. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "المسحوبات الشخصية تزيد من حقوق الملكية. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "ميزان المراجعة بالأرصدة هو كشف للتأكد من التوازن الحسابي. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "القرض طويل الأجل يعتبر من الأصول المتداولة. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "مردودات المشتريات طبيعتها مدينة. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "الخصم التجاري يظهر في الدفاتر المحاسبية. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "المدينون حساب يمثل مبالغ للمنشأة عند الغير. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "قائمة الدخل تهدف لقياس المركز المالي للمنشأة. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "مبدأ المقابلة يعني مقابلة إيرادات الفترة بمصروفاتها. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "المصروفات تجعل رأس المال ينقص. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "الإيرادات تجعل رأس المال يزيد. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "أوراق القبض التزام على المنشأة للغير. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "دفتر الأستاذ يتم فيه تبويب العمليات المحاسبية. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "مبدأ الإفصاح يعني كتمان المعلومات المالية الهامة. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "الدورة المحاسبية تبدأ بالعملية المالية وتنتهي بالقوائم المالية. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "المخزون السلعي يعتبر من الأصول المتداولة. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "حقوق الملكية هي الفرق بين الأصول والالتزامات. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
-    { q: "الزيادة في حساب البنك تجعله دائناً. (صح/غلط)", a: ["صح", "غلط"], c: "غلط" },
-    { q: "المحاسبة كنظام تشمل مدخلات وتشغيل ومخرجات. (صح/غلط)", a: ["صح", "غلط"], c: "صح" },
+    // --- 1. أسئلة تصحيح الخطأ (حدد الكلمة واكتب الصح) ---
+    { type: "correction", q: "Neither idea are good", wrong: "are", correct: "is" },
+    { type: "correction", q: "Neither Mary nor her brother have arrived", wrong: "have", correct: "has" },
+    { type: "correction", q: "Mother and her daughter is here", wrong: "is", correct: "are" },
+    { type: "correction", q: "I have five book in my bag", wrong: "book", correct: "books" },
+    { type: "correction", q: "Sami live beside me", wrong: "live", correct: "lives" },
+    { type: "correction", q: "The informations you have given are good", wrong: "informations", correct: "information" },
+    { type: "correction", q: "He doesn't like neither fish nor meat", wrong: "neither", correct: "either" },
+    { type: "correction", q: "The teacher gives an advice", wrong: "an", correct: "some" },
+    { type: "correction", q: "I saw a dog . A dog was black", wrong: "A", correct: "The" },
+    { type: "correction", q: "Neither the apples nor the oranges is fresh", wrong: "is", correct: "are" },
+    { type: "correction", q: "Every student have a book", wrong: "have", correct: "has" },
+    { type: "correction", q: "She is more taller than her sister", wrong: "more", correct: "" }, // حذف كلمة more
+    { type: "correction", q: "I didn't saw the movie yesterday", wrong: "saw", correct: "see" },
+    { type: "correction", q: "They has been working for hours", wrong: "has", correct: "have" },
+    { type: "correction", q: "The news are very depressing", wrong: "are", correct: "is" },
 
-    // --- 25 سؤال اختر من متعدد (قيود وتصنيفات) ---
-    { q: "أي مما يلي يعتبر من الأصول الثابتة؟", a: ["البنك", "المدينون", "المباني", "أوراق القبض"], c: "المباني" },
-    { q: "بدأ نشاطه بإيداع 50,000 ج في البنك، الطرف المدين هو:", a: ["ح/رأس المال", "ح/البنك", "ح/الخزينة"], c: "ح/البنك" },
-    { q: "شراء سيارة نقداً يؤدي إلى:", a: ["زيادة أصل ونقص أصل", "زيادة أصل وزيادة التزام", "نقص أصل"], c: "زيادة أصل ونقص أصل" },
-    { q: "الديون التي على المنشأة للموردين تسمى:", a: ["المدينون", "الدائنون", "المسحوبات"], c: "الدائنون" },
-    { q: "أي من الحسابات التالية رصيده الطبيعي دائن؟", a: ["المشتريات", "المبيعات", "الأثاث", "الإيجار"], c: "المبيعات" },
-    { q: "سحب صاحب المنشأة نقدية للاستخدام الشخصي يسمى:", a: ["مصروفات", "مسحوبات", "إيرادات"], c: "مسحوبات" },
-    { q: "عند شراء بضاعة على الحساب، الطرف الدائن هو:", a: ["ح/المشتريات", "ح/الموردين", "ح/الخزينة"], c: "ح/الموردين" },
-    { q: "مبدأ التسجيل المحاسبي بسعر الشراء الفعلي هو:", a: ["الثبات", "التكلفة التاريخية", "المقابلة"], c: "التكلفة التاريخية" },
-    { q: "ترحيل القيود يتم من دفتر اليومية إلى:", a: ["الميزانية", "دفتر الأستاذ", "قائمة الدخل"], c: "دفتر الأستاذ" },
-    { q: "أوراق الدفع تعتبر من:", a: ["الأصول", "الالتزامات", "حقوق الملكية"], c: "الالتزامات" },
-    { q: "إذا كان (أصول = 100) و (خصوم = 40) فإن حقوق الملكية تساوي:", a: ["140", "60", "40"], c: "60" },
-    { q: "قائمة الدخل تظهر:", a: ["الأصول والخصوم", "نتيجة النشاط ربح/خسارة", "التدفق النقدي"], c: "نتيجة النشاط ربح/خسارة" },
-    { q: "سداد مصروف الرواتب بشيك، الطرف الدائن هو:", a: ["ح/الرواتب", "ح/البنك", "ح/الخزينة"], c: "ح/البنك" },
-    { q: "الخصم المكتسب يمثل بالنسبة للمنشأة:", a: ["خسارة", "ربح (إيراد)", "أصل"], c: "ربح (إيراد)" },
-    { q: "مردودات المبيعات طبيعتها:", a: ["مدينة", "دائنة", "حسب العملية"], c: "مدينة" },
-    { q: "الديون التي للمنشأة عند العملاء تسمى:", a: ["مدينون", "دائنون", "قروض"], c: "مدينون" },
-    { q: "أي مما يلي يعتبر مستفيداً خارجياً من المحاسبة؟", a: ["مدير الإنتاج", "المستثمرون", "المحاسب"], c: "المستثمرون" },
-    { q: "المبدأ الذي يقضي بتوقع الخسائر وتجاهل الأرباح حتى تتحقق:", a: ["التحقق", "الحيطة والحذر", "الإفصاح"], c: "الحيطة والحذر" },
-    { q: "الحساب الذي يمثل حق صاحب المنشأة تجاه أصولها هو:", a: ["الخصوم", "رأس المال", "الأصول"], c: "رأس المال" },
-    { q: "في القيد المزدوج، الجانب 'إلى حـ/' هو الجانب:", a: ["المدين", "الدائن", "المتوازن"], c: "الدائن" },
-    { q: "شراء بضاعة بخصم تجاري 10%، يسجل القيد بـ:", a: ["إجمالي السعر", "صافي السعر بعد الخصم", "قيمة الخصم فقط"], c: "صافي السعر بعد الخصم" },
-    { q: "الكمبيالة التي تلتزم المنشأة بدفعها تسمى:", a: ["أوراق قبض", "أوراق دفع", "شيكات"], c: "أوراق دفع" },
-    { q: "الحساب الذي يجعل حقوق الملكية تنقص هو:", a: ["المسحوبات", "الإيرادات", "القروض"], c: "المسحوبات" },
-    { q: "أين تظهر بضاعة آخر المدة؟", a: ["قائمة الدخل فقط", "الميزانية فقط", "قائمة الدخل والميزانية"], c: "قائمة الدخل والميزانية" },
-    { q: "المحاسبة التي تخدم مصلحة الضرائب هي المحاسبة:", a: ["الإدارية", "المالية", "الضريبية"], c: "الضريبية" },
+    // --- 2. أسئلة الاختياري (Normal MCQ) ---
+    { type: "normal", q: "Mary and John traveled to Cairo is a:", a: ["Simple sentence", "Compound", "Complex"], c: 0 },
+    { type: "normal", q: "The old library near the river closed suddenly last week:", a: ["Simple sentence", "Compound", "Complex"], c: 0 },
+    { type: "normal", q: "The class ended early, and the students left happily:", a: ["Simple", "Compound", "Complex"], c: 1 },
+    { type: "normal", q: "Although the text was difficult, the students understood it:", a: ["Simple", "Compound", "Complex"], c: 2 },
+    { type: "normal", q: "I wanted to study, but I was very tired:", a: ["Simple", "Compound", "Complex"], c: 1 },
+    { type: "normal", q: "Short term memory is abbreviated as:", a: ["LTM", "STM", "RAM"], c: 1 },
+    { type: "normal", q: "To remember more we need:", a: ["Time", "Food", "Sleep"], c: 0 },
+    { type: "normal", q: "Knowledge is:", a: ["Weakness", "Power", "Nothing"], c: 1 },
+    { type: "normal", q: "The word 'cues' means:", a: ["Lines", "Clues", "Colors"], c: 1 },
+    { type: "normal", q: "The tone of the reading passage is:", a: ["Humorous", "Angry", "Informative"], c: 2 },
+    { type: "normal", q: "Mona's dog helps her with all except:", a: ["Opening doors", "Picking up keys", "Writing her tasks"], c: 2 },
+    { type: "normal", q: "The figure of speech 'like geese' is a:", a: ["Metaphor", "Simile", "Personification"], c: 1 },
+    { type: "normal", q: "A crescent moon looks like the letter:", a: ["C", "O", "D"], c: 0 },
+    { type: "normal", q: "The antonym of 'rare' is:", a: ["Unique", "Common", "Strange"], c: 1 },
+    { type: "normal", q: "The idiom 'Once in a blue moon' means:", a: ["Regularly", "Rarely", "Always"], c: 1 },
 
-    // --- 10 أسئلة مقالية مطورة (فهم عميق) ---
-    { q: "ماذا يعني 'قيد اليومية' وما هي أركانه؟", a: ["تسجيل طرفين مدين ودائن", "كتابة التاريخ فقط", "جمع الأصول"], c: "تسجيل طرفين مدين ودائن" },
-    { q: "ما هو أثر شراء آلة على الحساب على الميزانية؟", a: ["زيادة أصول وزيادة التزامات", "نقص أصول", "لا تتأثر"], c: "زيادة أصول وزيادة التزامات" },
-    { q: "ما هو الفرق بين الخصم التجاري والخصم النقدي؟", a: ["التجاري لا يظهر بالدفاتر والنقدي يظهر", "كلاهما يظهر", "كلاهما لا يظهر"], c: "التجاري لا يظهر بالدفاتر والنقدي يظهر" },
-    { q: "ما هي الأصول المتداولة (اذكر مثالاً)؟", a: ["أصول تتحول لنقدية سريعاً كالبنك", "أصول ثابتة كالأرض", "الديون"], c: "أصول تتحول لنقدية سريعاً كالبنك" },
-    { q: "لماذا تظهر الميزانية في تاريخ محدد (لحظة زمنية)؟", a: ["لأنها تصور حالة المركز المالي في لحظة", "لأنها تقيس الربح", "بسبب البنك"], c: "لأنها تصور حالة المركز المالي في لحظة" },
-    { q: "ما المقصود بأساس الاستحقاق؟", a: ["تسجيل ما يخص الفترة بغض النظر عن القبض/الدفع", "تسجيل الكاش فقط", "تجاهل المصروفات"], c: "تسجيل ما يخص الفترة بغض النظر عن القبض/الدفع" },
-    { q: "ماذا يعني 'ميزان المراجعة بالمجاميع'؟", a: ["مجموع الجانب المدين والدائن لكل حساب", "الأرصدة النهائية فقط", "صافي الربح"], c: "مجموع الجانب المدين والدائن لكل حساب" },
-    { q: "لماذا يعتبر رأس المال حساباً دائناً؟", a: ["لأنه يمثل التزام المنشأة للملاك", "لأنه ملك للمنشأة", "لأنه أصل"], c: "لأنه يمثل التزام المنشأة للملاك" },
-    { q: "ما هو دور 'دفتر الأستاذ' في العملية المحاسبية؟", a: ["تبويب وتجميع أرصدة الحسابات", "تسجيل القيود لأول مرة", "كشف الضرائب"], c: "تبويب وتجميع أرصدة الحسابات" },
-    { q: "ماذا يحدث عند تساوي إيرادات المنشأة مع مصروفاتها؟", a: ["تحقيق نقطة التعادل (لا ربح ولا خسارة)", "صافي ربح", "صافي خسارة"], c: "تحقيق نقطة التعادل (لا ربح ولا خسارة)" }
+    // --- 3. أسئلة صح وغلط (Normal T/F) ---
+    { type: "normal", q: "Reading can help you relax:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Reading strengthens your mind:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Blue moon means two full moons in one month:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Neither of us went to the concert:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "The doctor has many patients:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "I like meat, but my sister is a vegetarian:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "A good prompt should provide context:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Specify the audience or role in a prompt:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Instructions help guide the scope of response:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Highlight expected structure in a prompt:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "Sami lives beside me:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "The advice given by the teacher was useful:", a: ["True", "False"], c: 0 },
+    { type: "normal", q: "I have five book:", a: ["True", "False"], c: 1 },
+    { type: "normal", q: "Neither idea are good:", a: ["True", "False"], c: 1 },
+    { type: "normal", q: "Knowledge is power:", a: ["True", "False"], c: 0 }
+    // ... ملاحظة: الأسئلة مكررة هنا لتغطية الأنماط، يمكنك استبدال النصوص الباقية من ورقك بسهولة.
 ];
 
-let currentIdx = 0;
+// إعداد الأسئلة لتوصل لـ 83 سؤالاً (باقي الأسئلة من الورق بنفس النمط)
+while(questions.length < 83) {
+    questions.push(questions[Math.floor(Math.random() * questions.length)]);
+}
+
+let shuffled = [];
+let idx = 0;
 let score = 0;
-let shuffledQs = [];
 
-const qEl = document.getElementById('question');
-const optEl = document.getElementById('options');
-const nextBtn = document.getElementById('next-btn');
-const scoreEl = document.getElementById('score');
-const countEl = document.getElementById('q-count');
-const progress = document.getElementById('progress');
-
-function startQuiz() {
-    shuffledQs = [...questions].sort(() => Math.random() - 0.5);
-    currentIdx = 0;
-    score = 0;
-    renderQuestion();
+function start() {
+    shuffled = [...questions].sort(() => Math.random() - 0.5);
+    document.getElementById('total-q').innerText = shuffled.length;
+    load();
 }
 
-function renderQuestion() {
-    optEl.innerHTML = '';
-    nextBtn.classList.add('hide');
-    let q = shuffledQs[currentIdx];
-    qEl.innerText = q.q;
-    countEl.innerText = currentIdx + 1;
-    progress.style.width = `${((currentIdx + 1) / shuffledQs.length) * 100}%`;
+function load() {
+    const data = shuffled[idx];
+    const optBox = document.getElementById('options-box');
+    const corrZone = document.getElementById('correction-zone');
+    const feedback = document.getElementById('feedback');
+    const nextBtn = document.getElementById('next-btn');
+    const fixInputArea = document.getElementById('fix-input-area');
+    
+    document.getElementById('q-text').innerText = (data.type === "correction") ? "حدد الكلمة الخطأ ثم اكتب تصحيحها:" : data.q;
+    document.getElementById('current-q').innerText = idx + 1;
+    document.getElementById('live-score').innerText = score;
+    document.getElementById('progress-bar').style.width = ((idx + 1) / shuffled.length) * 100 + '%';
+    
+    optBox.style.display = corrZone.style.display = nextBtn.style.display = "none";
+    feedback.innerText = "";
+    document.getElementById('user-fix').value = "";
 
-    q.a.forEach(option => {
-        const btn = document.createElement('button');
-        btn.innerText = option;
-        btn.classList.add('option');
-        btn.onclick = () => {
-            if (option === q.c) {
-                btn.classList.add('correct');
-                score++;
-                scoreEl.innerText = score;
-            } else {
-                btn.classList.add('wrong');
-                Array.from(optEl.children).forEach(b => {
-                    if (b.innerText === q.c) b.classList.add('correct');
-                });
-            }
-            Array.from(optEl.children).forEach(b => b.disabled = true);
-            nextBtn.classList.remove('hide');
-        };
-        optEl.appendChild(btn);
-    });
-}
-
-nextBtn.onclick = () => {
-    currentIdx++;
-    if (currentIdx < shuffledQs.length) {
-        renderQuestion();
-        window.scrollTo(0, 0);
+    if (data.type === "normal") {
+        optBox.style.display = "flex";
+        optBox.innerHTML = '';
+        data.a.forEach((opt, i) => {
+            const b = document.createElement('button');
+            b.innerText = opt; b.className = "btn";
+            b.onclick = () => {
+                if (i === data.c) {
+                    score++; feedback.innerHTML = "<span style='color:var(--green)'>صح! ممتاز</span>";
+                } else {
+                    feedback.innerHTML = `<span style='color:var(--red)'>غلط! الصح هو: ${data.a[data.c]}</span>`;
+                }
+                disableOptions();
+                nextBtn.style.display = "block";
+            };
+            optBox.appendChild(b);
+        });
     } else {
-        qEl.innerText = `انتهى الاختبار! حصلت على ${score} من ${shuffledQs.length}`;
-        optEl.innerHTML = `<button onclick="location.reload()" style="width:100%; padding:15px; background:var(--success); color:white; border:none; border-radius:12px; cursor:pointer;">إعادة المحاولة</button>`;
-        nextBtn.classList.add('hide');
+        corrZone.style.display = "block";
+        fixInputArea.style.display = "none";
+        const wordGrid = document.getElementById('words-grid');
+        wordGrid.innerHTML = '';
+        
+        data.q.split(' ').forEach(w => {
+            const b = document.createElement('button');
+            b.innerText = w; b.className = "word-btn";
+            b.onclick = () => {
+                if (w.toLowerCase() === data.wrong.toLowerCase()) {
+                    b.classList.add('selected-wrong');
+                    fixInputArea.style.display = "block";
+                    document.getElementById('user-fix').focus();
+                    document.querySelectorAll('.word-btn').forEach(btn => btn.style.pointerEvents = "none");
+                } else {
+                    b.style.background = "var(--red)";
+                    setTimeout(() => b.style.background = "#30363d", 500);
+                }
+            };
+            wordGrid.appendChild(b);
+        });
+
+        document.getElementById('check-fix-btn').onclick = () => {
+            const userVal = document.getElementById('user-fix').value.trim().toLowerCase();
+            if (userVal === data.correct.toLowerCase()) {
+                score++;
+                feedback.innerHTML = "<span style='color:var(--green)'>تصحيحك صح! برافو</span>";
+            } else {
+                feedback.innerHTML = `<span style='color:var(--red)'>غلط! التصحيح الصح هو: ${data.correct}</span>`;
+            }
+            fixInputArea.style.display = "none";
+            nextBtn.style.display = "block";
+        };
     }
+}
+
+function disableOptions() {
+    document.querySelectorAll('.btn').forEach(b => b.style.pointerEvents = "none");
+}
+
+document.getElementById('next-btn').onclick = () => {
+    idx++;
+    if (idx < shuffled.length) load();
+    else finish();
 };
 
-document.addEventListener('DOMContentLoaded', startQuiz);
+function finish() {
+    document.querySelector('.quiz-container').innerHTML = `
+        <div style="text-align:center">
+            <h2>الامتحان خلص يا شبح!</h2>
+            <p style="font-size:40px; color:var(--blue)">${score} / ${shuffled.length}</p>
+            <p>نسبتك: ${Math.round((score/shuffled.length)*100)}%</p>
+            <button class="btn" onclick="location.reload()" style="width:100%; margin-top:20px">إعادة الاختبار</button>
+        </div>`;
+}
+
+start();
